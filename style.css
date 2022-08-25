@@ -10,7 +10,6 @@
 
 body{
   background-image:linear-gradient(to right,green,white,red);
-  /* background: #81c644; */
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -26,7 +25,7 @@ body{
 }
 
 .container{
-  display: flex;
+  display: flex;                         /* Affiche un élément en tant que conteneur flexible au niveau du bloc */
   text-align: center;
   width: auto;
   justify-content: center;               /* Indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur */
