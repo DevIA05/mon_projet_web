@@ -1,12 +1,82 @@
-#top-banner {
-  color : rgb(255,255,255);
-    font-size: 30px;
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+/* https://fonts.google.com/ */
 
-  background-color: rgba(30,30,30,0.7);
-  overflow: auto;
+* {                       /* Sélecteur universel. Il correspond à un élément de n'importe quel type. */
+  margin : 0;             /* Créer un espace supplémentaire à l'extérieur de l'élément */
+  padding: 0;             /* Crée un espace supplémentaire à l'intérieur d'un élément */
+  box-sizing: border-box; /* Définit la façon dont la hauteur et la largeur totale d'un élément est calculée: indique au navigateur de */
+                          /*   prendre en compte la bordure et le remplissage dans la valeur définie pour la largeur et la hauteur.  */
+}
+
+body{
+  background-image:linear-gradient(to right,green,white,red);
+  /* background: #81c644; */
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper{
+  margin-top: 10%;
+}
+
+.wrapper h1{
+  font-family: 'Allura', cursive;
+  font-size: 52px;
+  margin-bottom: 60px;
   text-align: center;
 }
 
-.blink{ border:1px solid black;  animation: blink 4s infinite; overflow: auto; text-align: center; font-size: 30px; color: white;}
-@keyframes blink{  0% {    background: red;  }  20% {    background: green;  }  40% {    background: yellow;  }  60% {    background: blue;  }  80% {    background: orange;  }  100% {    background: red;  }}
-@-webkit-keyframes blink{  0% {    background: red;  }  20% {    background: green;  }  40% {    background: yellow;  }  60% {    background: blue;  }  80% {    background: orange;  }  100% {    background: red;  }}
+.container{
+  display: flex;
+  text-align: center;
+  width: auto;
+  justify-content: center;               /* Indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur */
+                                         /*   flexible ou selon l'axe en ligne lorsque le conteneur est une grille: l'alignement est appliqué après que les longueurs */
+                                         /*   et les marges automatiques ont été appliquées */
+  flex-wrap: wrap;                       /* Indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur */
+                                         /*   plusieurs lignes avec un retour automatique: les éléments flexibles sont disposé sur plusieurs lignes. */
+}
+
+.container .section{
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height:20px;                     /* Indique la hauteur minimale des lignes au sein de l'élément (l'espacement entre les lignes). */
+  color: #8e8b8b;
+  position: relative;
+}
+
+.container .section h3{
+  color: #81c644;
+  font-size:26px;
+  margin-top:50px;
+}
+
+.container .section p{
+  margin: 15px 0;
+}
+
+.container .section #lien{
+  margin: 10px 0 100px;
+  position: relative;
+  top: 25%;
+}
+
+.container .section .sectImg{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top:-50px;
+  left:50%;
+  transform: translateX(-50%);
+  background: #fff;
+
+}
+
+.container .section .sectImg img{
+  width:100px;
+  height: 100px; 
+  padding:10px;
+}
